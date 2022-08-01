@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		5D9DBD892897F3830051F094 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DBD882897F3830051F094 /* AppDelegate.swift */; };
 		5D9DBD8B2897F3830051F094 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DBD8A2897F3830051F094 /* SceneDelegate.swift */; };
-		5D9DBD8D2897F3830051F094 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DBD8C2897F3830051F094 /* ViewController.swift */; };
+		5D9DBD8D2897F3830051F094 /* AnimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DBD8C2897F3830051F094 /* AnimeViewController.swift */; };
 		5D9DBD902897F3830051F094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9DBD8E2897F3830051F094 /* Main.storyboard */; };
 		5D9DBD922897F3880051F094 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D9DBD912897F3880051F094 /* Assets.xcassets */; };
 		5D9DBD952897F3880051F094 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D9DBD932897F3880051F094 /* LaunchScreen.storyboard */; };
+		5D9DBDA12897F3F40051F094 /* AnimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DBDA02897F3F40051F094 /* AnimeResponse.swift */; };
+		5D9DBDA42897F4290051F094 /* AnimePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D9DBDA32897F4290051F094 /* AnimePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D9DBD852897F3830051F094 /* MVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D9DBD882897F3830051F094 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D9DBD8A2897F3830051F094 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5D9DBD8C2897F3830051F094 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5D9DBD8C2897F3830051F094 /* AnimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeViewController.swift; sourceTree = "<group>"; };
 		5D9DBD8F2897F3830051F094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D9DBD912897F3880051F094 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D9DBD942897F3880051F094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D9DBD962897F3880051F094 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D9DBDA02897F3F40051F094 /* AnimeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeResponse.swift; sourceTree = "<group>"; };
+		5D9DBDA32897F4290051F094 /* AnimePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimePresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		5D9DBD872897F3830051F094 /* MVP */ = {
 			isa = PBXGroup;
 			children = (
-				5D9DBD882897F3830051F094 /* AppDelegate.swift */,
-				5D9DBD8A2897F3830051F094 /* SceneDelegate.swift */,
-				5D9DBD8C2897F3830051F094 /* ViewController.swift */,
-				5D9DBD8E2897F3830051F094 /* Main.storyboard */,
-				5D9DBD912897F3880051F094 /* Assets.xcassets */,
-				5D9DBD932897F3880051F094 /* LaunchScreen.storyboard */,
-				5D9DBD962897F3880051F094 /* Info.plist */,
+				5D9DBDA22897F41C0051F094 /* Presenter */,
+				5D9DBD9F2897F3C80051F094 /* Model */,
+				5D9DBD9E2897F3BE0051F094 /* View */,
+				5D9DBD9D2897F3AD0051F094 /* Storyboard */,
+				5D9DBD9C2897F3970051F094 /* Resources */,
 			);
 			path = MVP;
+			sourceTree = "<group>";
+		};
+		5D9DBD9C2897F3970051F094 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5D9DBD962897F3880051F094 /* Info.plist */,
+				5D9DBD8A2897F3830051F094 /* SceneDelegate.swift */,
+				5D9DBD882897F3830051F094 /* AppDelegate.swift */,
+				5D9DBD912897F3880051F094 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5D9DBD9D2897F3AD0051F094 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5D9DBD932897F3880051F094 /* LaunchScreen.storyboard */,
+				5D9DBD8E2897F3830051F094 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		5D9DBD9E2897F3BE0051F094 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D9DBD8C2897F3830051F094 /* AnimeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D9DBD9F2897F3C80051F094 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D9DBDA02897F3F40051F094 /* AnimeResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D9DBDA22897F41C0051F094 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5D9DBDA32897F4290051F094 /* AnimePresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +184,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D9DBD8D2897F3830051F094 /* ViewController.swift in Sources */,
+				5D9DBD8D2897F3830051F094 /* AnimeViewController.swift in Sources */,
+				5D9DBDA42897F4290051F094 /* AnimePresenter.swift in Sources */,
 				5D9DBD892897F3830051F094 /* AppDelegate.swift in Sources */,
 				5D9DBD8B2897F3830051F094 /* SceneDelegate.swift in Sources */,
+				5D9DBDA12897F3F40051F094 /* AnimeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +338,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MVP/Info.plist;
+				INFOPLIST_FILE = MVP/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -317,7 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MVP/Info.plist;
+				INFOPLIST_FILE = MVP/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
